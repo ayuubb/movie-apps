@@ -1,6 +1,6 @@
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 5.5rem 0 1rem;
+  padding: 1rem 0;
 
   &__title,
   &__title-center {
@@ -15,10 +15,10 @@
 }
 
 .container {
-  max-width: 968px;
-  // max-width: 1024px;
-  margin-left: var(--mb-1);
-  margin-right: var(--mb-1);
+  // max-width: 968px;
+  max-width: 1024px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
 
 .grid {

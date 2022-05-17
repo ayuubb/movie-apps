@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="home">
       <div className="home__container container grid">
         <h1 className="home__title">
-          <span className="home__title-span">The first</span> online streaming
+          <span className="home__title-span">The best</span> online streaming
           movie search engine
         </h1>
         <div className="home__data">

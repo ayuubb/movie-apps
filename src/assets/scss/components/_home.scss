@@ -8,11 +8,11 @@
   }
   &__data {
     // width: 200px;
-    justify-self: center;
+    // justify-self: center;
   }
   &__title {
     font-size: var(--big-font-size);
-    line-height: 140%;
+    line-height: 110%;
     margin-bottom: var(--mb-1);
     text-transform: uppercase;
     &-span {
@@ -21,6 +21,7 @@
   }
   &__description {
     margin-bottom: var(--mb-2-5);
+    color: var(--text-color);
   }
   &__social {
     position: absolute;
