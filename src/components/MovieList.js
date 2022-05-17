@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Movie from '../part/Movie';
+import SearchBox from 'part/SearchBox';
 
 export default function MovieList() {
   const [movie, setMovie] = useState([]);
@@ -22,7 +23,7 @@ export default function MovieList() {
   });
   return (
     <section className="product section container">
-      <h2>test ayub</h2>
+      <SearchBox />
       <div className="product__container grid">
         {movie.map((item) => {
           return (

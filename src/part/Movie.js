@@ -3,7 +3,7 @@ import React from 'react';
 export default function Movie(props) {
   const { title, year, imdbID, type, poster } = props;
   return (
-    <div className="product_card">
+    <div className="product__card">
       <div className="product__circle"></div>
       <img className="product__img" src={props.poster} alt={props.title} />
       <h3 className="product__title">{props.title}</h3>
