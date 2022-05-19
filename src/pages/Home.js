@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import MovieList from 'components/MovieList';
-import Header from 'components/Header';
 import Hero from 'components/Hero';
-import { fetchMovies } from 'features/movie/movieSlice';
+import { fetchMovies } from 'features/movies/movieSlice';
 import { useDispatch } from 'react-redux';
 
 export default function Home() {
@@ -11,10 +10,9 @@ export default function Home() {
     dispatch(fetchMovies());
   }, [dispatch]);
   return (
-    <>
-      <Header />
+    <section>
       <Hero />
       <MovieList />
-    </>
+    </section>
   );
 }

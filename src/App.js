@@ -1,16 +1,20 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
 import MovieDetail from './pages/MovieDetail';
+import Home from './pages/Home';
+import Header from './components/Header';
 import PageNottFound from './pages/PageNotFound';
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="detail:id" element={<MovieDetail />} />
-        <Route path="notfound" element={<PageNottFound />} />
-      </Routes>
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/movie/:imdbID" element={<MovieDetail />} />
+          <Route path="notfound" element={<PageNottFound />} />
+        </Routes>
+      </div>
     </div>
   );
 }

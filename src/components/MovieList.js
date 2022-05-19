@@ -1,7 +1,7 @@
-import Movie from '../part/Movie';
-import SearchBox from 'part/SearchBox';
 import { useSelector } from 'react-redux';
-import { getAllMovies } from 'features/movie/movieSlice';
+import { getAllMovies } from 'features/movies/movieSlice';
+import Movie from 'part/Movie';
+import SearchBox from 'part/SearchBox';
 
 export default function MovieList() {
   const movies = useSelector(getAllMovies);
@@ -11,7 +11,7 @@ export default function MovieList() {
     movies.Response === 'True' ? (
       movies.Search.map((movie, index) => <Movie key={index} data={movie} />)
     ) : (
-      <div className="movieserror">
+      <div className="movies__error">
         <h3>{movies.Error}</h3>
       </div>
     );
