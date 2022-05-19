@@ -1,15 +1,28 @@
 @import 'config/variables';
 @import 'base/base';
-@import 'theme/theme';
 @import 'layout/layout';
 @import 'components/header';
 @import 'components/home';
 @import 'components/buttons';
 @import 'components/about';
-@import 'components/steps';
 @import 'components/products';
-@import 'components/questions';
 @import 'components/contact';
 @import 'components/footer';
-@import 'components/scroll';
 @import 'components/breakpoints';
+
+.text-center {
+  text-align: center;
+}
+
+.pagignation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  &__button {
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+}

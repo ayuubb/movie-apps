@@ -30,6 +30,12 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .about__details {
+    display: grid;
+  }
+}
+
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .steps {
@@ -229,9 +235,9 @@
     }
   }
 
-  .about__container {
-    column-gap: 7rem;
-  }
+  // .about__container {
+  //   column-gap: 7rem;
+  // }
 
   .scrollup {
     right: 3rem;

@@ -1,19 +1,23 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchMovies = createAsyncThunk('movies/fetchMovies', async () => {
-  try {
-    const response = await axios.get(process.env.REACT_APP_URL, {
-      params: {
-        s: 'superman',
-        apikey: process.env.REACT_APP_OMDAPI_KEY,
-      },
-    });
-    return response.data;
-  } catch (error) {
-    console.log(error);
+export const fetchMovies = createAsyncThunk(
+  'movies/fetchMovies',
+  async (term) => {
+    try {
+      const response = await axios.get(process.env.REACT_APP_URL, {
+        params: {
+          s: term,
+          apikey: process.env.REACT_APP_OMDAPI_KEY,
+          page: '1',
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
-});
+);
 export const fetchMoviesDetails = createAsyncThunk(
   'movies/fetchMoviesDetails',
   async (id) => {
@@ -41,8 +45,8 @@ const movieSlice = createSlice({
   name: 'movies',
   initialState,
   reducers: {
-    addMovies: (state, { payload }) => {
-      state.movies = payload;
+    removeMovieDetails: (state) => {
+      state.detailMovie = {};
     },
   },
   extraReducers: {
@@ -63,7 +67,7 @@ const movieSlice = createSlice({
   },
 });
 
-export const { addMovies } = movieSlice.actions;
+export const { removeMovieDetails } = movieSlice.actions;
 export const getAllMovies = (state) => state.movies.movies;
 export const getMovieDetail = (state) => state.movies.detailMovie;
 export default movieSlice.reducer;

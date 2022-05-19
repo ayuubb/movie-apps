@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { getAllMovies } from 'features/movies/movieSlice';
-import Movie from 'part/Movie';
-import SearchBox from 'part/SearchBox';
+import Movie from 'components/Movie';
+import SearchBox from 'components/SearchBox';
 
 export default function MovieList() {
   const movies = useSelector(getAllMovies);
