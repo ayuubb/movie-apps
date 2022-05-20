@@ -7,7 +7,7 @@ export default function SearchBox() {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(fetchMovies(term));
+    dispatch(fetchMovies({ movie: term }));
     setTerm('');
   };
   return (

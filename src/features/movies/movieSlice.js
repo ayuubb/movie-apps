@@ -3,13 +3,13 @@ import axios from 'axios';
 
 export const fetchMovies = createAsyncThunk(
   'movies/fetchMovies',
-  async (term) => {
+  async ({ movie, counter }) => {
     try {
       const response = await axios.get(process.env.REACT_APP_URL, {
         params: {
-          s: term,
+          s: movie,
           apikey: process.env.REACT_APP_OMDAPI_KEY,
-          page: '1',
+          page: counter,
         },
       });
       return response.data;

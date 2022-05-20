@@ -9,8 +9,8 @@ export default function Home() {
   const dispatch = useDispatch();
   const movie = 'Superman';
   useEffect(() => {
-    dispatch(fetchMovies(movie));
-  }, [dispatch]);
+    dispatch(fetchMovies({ movie: movie, counter: counter }));
+  }, [counter, dispatch]);
 
   const previous = () => {
     setCounter(counter - 1);
