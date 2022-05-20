@@ -1,1 +1,1 @@
-# Movie app using react js & redux toolkit
+# Movie app MOVIE SEARCH ENGINE using react js & redux toolkit
